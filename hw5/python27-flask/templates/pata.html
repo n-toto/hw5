@@ -1,0 +1,13 @@
+<body>
+	<h1>パタトクカシーー</h1>
+	<h1>好きな単語をふたつ入れてみよう</h1>
+  <ul>
+    <li> word1 = {{request.args.get("word1")}} </li>
+	<li> word2 = {{request.args.get("word2")}} </li>
+    <li> パタトクカシーー(word1,word2) = {{pata}} </li>
+	<form>
+		<input type=text name=word1>
+		<input type=text name=word2>
+		<input type=submit>
+	</form>
+</body>

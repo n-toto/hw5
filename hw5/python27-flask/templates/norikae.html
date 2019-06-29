@@ -1,0 +1,37 @@
+<!--
+<html>
+  <head><title>JSONを読み込む例</title></head>
+  <body>
+    路線：
+    <ul>
+      {% for line in network %}
+      <li> {{line.Name}}
+        <ul>
+          {% for station in line["Stations"] %}
+          <li> {{station}} </li>
+          {% endfor %}
+        </ul> 
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+-->
+
+<body>
+	<h1>乗り換え案内</h1>
+  <ul>
+    <li> 出発地 = {{request.args.get("station1")}} </li>
+	  <li> 到着地 = {{request.args.get("station2")}} </li>
+    {% for station in route %}
+    <li> {{station}} </li>
+    {% endfor %}
+  
+	<form>
+		<input type=text name=station1>
+		<input type=text name=station2>
+		<input type=submit>
+	</form>
+</body>
+
+  
